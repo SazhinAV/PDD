@@ -1,0 +1,47 @@
+body{
+    position: relative;
+    overflow-y: hidden;
+    overflow-x: hidden;
+}
+
+.block-main {
+    position: absolute;
+    top: 150px;
+    left: 12px;
+    right: 12px;
+    bottom: 12px;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.block-content {
+    
+}
+
+.block-themes {
+    padding: 0 12px;
+}
+
+.block-theme {
+    border-width: 1px;
+    border-style: solid;
+    border-color: black;
+    border-radius: 5px;
+    text-align: center;
+    padding: 5px;
+    margin: 5px 0px;
+    cursor: pointer;
+    font-size: 17px;
+    max-width: 500px;
+}
+
+.back {
+    position: absolute;
+    padding: 6px 6px;
+    background-color: white;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+    border-radius: 12px;
+    top: 16px;
+    right: 6px;
+    cursor: pointer;
+}

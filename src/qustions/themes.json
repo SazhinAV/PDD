@@ -1,0 +1,837 @@
+data = `
+[
+    {
+        "date": "23.05.2022"
+    },
+    {
+        "id": 1,
+        "name": "ПДД",
+        "questions": [
+            {
+                "id": 1,
+                "points": 1,
+                "shild": false,
+                "life": 0,
+                "damage": 1,
+                "question": "Назовите всех участников дорожного движения.",
+                "success": false,
+                "answers": [
+                    {
+                        "id": 1,
+                        "isTrue": false,
+                        "text": "Пешеходы",
+                        "checked": ""
+                    },
+                    {
+                        "id": 2,
+                        "isTrue": false,
+                        "text": "Водители и пассажиры",
+                        "checked": ""
+                    },
+                    {
+                        "id": 3,
+                        "isTrue": true,
+                        "text": "Все перечисленные",
+                        "checked": ""
+                    }
+                ]
+            },
+            {
+                "id": 2,
+                "points": 1,
+                "shild": true,
+                "life": 0,
+                "damage": 1,
+                "question": "Когда надо соблюдать правила дорожного движения?",
+                "success": false,
+                "answers": [
+                    {
+                        "id": 1,
+                        "isTrue": true,
+                        "text": "Всегда",
+                        "checked": ""
+                    },
+                    {
+                        "id": 2,
+                        "isTrue": false,
+                        "text": "Когда рядом полицейский",
+                        "checked": ""
+                    },
+                    {
+                        "id": 3,
+                        "isTrue": false,
+                        "text": "Когда у тебя хорошее настроение",
+                        "checked": ""
+                    }
+                ]
+            },
+            {
+                "id": 3,
+                "points": 1,
+                "shild": false,
+                "life": 0,
+                "damage": 1,
+                "question": "Кто регулирует движение на дороге, когда на улице не работает светофор?",
+                "success": false,
+                "answers": [
+                    {
+                        "id": 1,
+                        "isTrue": false,
+                        "text": "Полицейский",
+                        "checked": ""
+                    },
+                    {
+                        "id": 2,
+                        "isTrue": true,
+                        "text": "Регулировщик",
+                        "checked": ""
+                    },
+                    {
+                        "id": 3,
+                        "isTrue": false,
+                        "text": "Дорожный рабочий",
+                        "checked": ""
+                    }
+                ]
+            },
+            {
+                "id": 4,
+                "points": 1,
+                "shild": false,
+                "life": 0,
+                "damage": 1,
+                "question": "Какой сигнал обозначают разведенные руки регулировщика?",
+                "success": false,
+                "answers": [
+                    {
+                        "id": 1,
+                        "isTrue": true,
+                        "text": "Движение пешеходов разрешено",
+                        "checked": ""
+                    },
+                    {
+                        "id": 2,
+                        "isTrue": false,
+                        "text": "Движение транспорта запрещено",
+                        "checked": ""
+                    },
+                    {
+                        "id": 3,
+                        "isTrue": false,
+                        "text": "Движение пешеходов и транспорта запрещено",
+                        "checked": ""
+                    }
+                ]
+            },
+            {
+                "id": 5,
+                "points": 1,
+                "shild": false,
+                "life": 0,
+                "damage": 1,
+                "question": "Какого элемента дороги не существует?",
+                "success": false,
+                "answers": [
+                    {
+                        "id": 1,
+                        "isTrue": false,
+                        "text": "Кювет",
+                        "checked": ""
+                    },
+                    {
+                        "id": 2,
+                        "isTrue": false,
+                        "text": "Обочина",
+                        "checked": ""
+                    },
+                    {
+                        "id": 3,
+                        "isTrue": true,
+                        "text": "Паропед",
+                        "checked": ""
+                    }
+                ]
+            },
+            {
+                "id": 6,
+                "points": 1,
+                "shild": false,
+                "life": 0,
+                "damage": 1,
+                "question": "Кто такой пассажир?",
+                "success": false,
+                "answers": [
+                    {
+                        "id": 1,
+                        "isTrue": true,
+                        "text": "Человек, который находится в машине, кроме водителя",
+                        "checked": ""
+                    },
+                    {
+                        "id": 2,
+                        "isTrue": false,
+                        "text": "Тот, кто ведёт машину",
+                        "checked": ""
+                    },
+                    {
+                        "id": 3,
+                        "isTrue": false,
+                        "text": "Тот, кто идёт пешком",
+                        "checked": ""
+                    }
+                ]
+            },
+            {
+                "id": 7,
+                "points": 1,
+                "shild": false,
+                "life": 0,
+                "damage": 1,
+                "question": "Как называется транспорт, служащий для перевозки людей?",
+                "success": false,
+                "answers": [
+                    {
+                        "id": 1,
+                        "isTrue": true,
+                        "text": "Общественный",
+                        "checked": ""
+                    },
+                    {
+                        "id": 2,
+                        "isTrue": false,
+                        "text": "Воздушный",
+                        "checked": ""
+                    },
+                    {
+                        "id": 3,
+                        "isTrue": false,
+                        "text": "Личный",
+                        "checked": ""
+                    }
+                ]
+            },
+            {
+                "id": 8,
+                "points": 1,
+                "shild": false,
+                "life": 1,
+                "damage": 1,
+                "question": "Где в городе следует ожидать общественный транспорт?",
+                "success": false,
+                "answers": [
+                    {
+                        "id": 1,
+                        "isTrue": false,
+                        "text": "На проезжей части",
+                        "checked": ""
+                    },
+                    {
+                        "id": 2,
+                        "isTrue": true,
+                        "text": "На посадочной площадке",
+                        "checked": ""
+                    },
+                    {
+                        "id": 3,
+                        "isTrue": false,
+                        "text": "На обочине дороги",
+                        "checked": ""
+                    }
+                ]
+            },
+            {
+                "id": 9,
+                "points": 1,
+                "shild": false,
+                "life": 0,
+                "damage": 1,
+                "question": "Что можно отнести к причинам ДТП?",
+                "success": false,
+                "answers": [
+                    {
+                        "id": 1,
+                        "isTrue": false,
+                        "text": "Переход улицы перед близко идущей машиной",
+                        "checked": ""
+                    },
+                    {
+                        "id": 2,
+                        "isTrue": false,
+                        "text": "Переход улицы в неположенном месте",
+                        "checked": ""
+                    },
+                    {
+                        "id": 3,
+                        "isTrue": true,
+                        "text": "Все перечисленные варианты",
+                        "checked": ""
+                    }
+                ]
+            },
+            {
+                "id": 10,
+                "points": 1,
+                "shild": false,
+                "life": 1,
+                "damage": 1,
+                "question": "Какой транспорт относится к городскому общественному транспорту?",
+                "success": false,
+                "answers": [
+                    {
+                        "id": 1,
+                        "isTrue": false,
+                        "text": "Автобус, троллейбус, грузовик",
+                        "checked": ""
+                    },
+                    {
+                        "id": 2,
+                        "isTrue": false,
+                        "text": "Самолет, поезд, теплоход",
+                        "checked": ""
+                    },
+                    {
+                        "id": 3,
+                        "isTrue": true,
+                        "text": "Троллейбус, автобус, трамвай",
+                        "checked": ""
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": 2,
+        "name": "ПДД 2",
+        "questions": [
+            {
+                "id": 1,
+                "points": 1,
+                "shild": false,
+                "life": 0,
+                "damage": 1,
+                "question": "По какой части дороги должен ходить пешеход?",
+                "success": false,
+                "answers": [
+                    {
+                        "id": 1,
+                        "isTrue": false,
+                        "text": "По проезжей части",
+                        "checked": ""
+                    },
+                    {
+                        "id": 2,
+                        "isTrue": true,
+                        "text": "По тротуару",
+                        "checked": ""
+                    },
+                    {
+                        "id": 3,
+                        "isTrue": false,
+                        "text": "По клумбам",
+                        "checked": ""
+                    }
+                ]
+            },
+            {
+                "id": 2,
+                "points": 1,
+                "shild": true,
+                "life": 0,
+                "damage": 1,
+                "question": "На какой сигнал светофора можно начинать переход?",
+                "success": false,
+                "answers": [
+                    {
+                        "id": 1,
+                        "isTrue": false,
+                        "text": "Красный",
+                        "checked": ""
+                    },
+                    {
+                        "id": 2,
+                        "isTrue": false,
+                        "text": "Желтый",
+                        "checked": ""
+                    },
+                    {
+                        "id": 3,
+                        "isTrue": true,
+                        "text": "Зеленый",
+                        "checked": ""
+                    }
+                ]
+            },
+            {
+                "id": 3,
+                "points": 1,
+                "shild": false,
+                "life": 0,
+                "damage": 1,
+                "question": "Как называется место пересечения дорог?",
+                "success": false,
+                "answers": [
+                    {
+                        "id": 1,
+                        "isTrue": false,
+                        "text": "Тротуар",
+                        "checked": ""
+                    },
+                    {
+                        "id": 2,
+                        "isTrue": true,
+                        "text": "Перекресток",
+                        "checked": ""
+                    },
+                    {
+                        "id": 3,
+                        "isTrue": false,
+                        "text": "Проезжая часть",
+                        "checked": ""
+                    }
+                ]
+            },
+            {
+                "id": 4,
+                "points": 1,
+                "shild": false,
+                "life": 0,
+                "damage": 1,
+                "question": "Куда необходимо посмотреть прежде чем переходить дорогу?",
+                "success": false,
+                "answers": [
+                    {
+                        "id": 1,
+                        "isTrue": true,
+                        "text": "На лево",
+                        "checked": ""
+                    },
+                    {
+                        "id": 2,
+                        "isTrue": false,
+                        "text": "На право",
+                        "checked": ""
+                    },
+                    {
+                        "id": 3,
+                        "isTrue": false,
+                        "text": "Прямо",
+                        "checked": ""
+                    }
+                ]
+            },
+            {
+                "id": 5,
+                "points": 1,
+                "shild": false,
+                "life": 0,
+                "damage": 1,
+                "question": "Как называют людей, идущих по дороге?",
+                "success": false,
+                "answers": [
+                    {
+                        "id": 1,
+                        "isTrue": true,
+                        "text": "Пешеходы",
+                        "checked": ""
+                    },
+                    {
+                        "id": 2,
+                        "isTrue": false,
+                        "text": "Водители",
+                        "checked": ""
+                    },
+                    {
+                        "id": 3,
+                        "isTrue": false,
+                        "text": "Пассажиры",
+                        "checked": ""
+                    }
+                ]
+            },
+            {
+                "id": 6,
+                "points": 1,
+                "shild": false,
+                "life": 0,
+                "damage": 1,
+                "question": "В каком месте можно переходить улицу?",
+                "success": false,
+                "answers": [
+                    {
+                        "id": 1,
+                        "isTrue": false,
+                        "text": "По проезжей части",
+                        "checked": ""
+                    },
+                    {
+                        "id": 2,
+                        "isTrue": true,
+                        "text": "По пешеходному переходу",
+                        "checked": ""
+                    },
+                    {
+                        "id": 3,
+                        "isTrue": false,
+                        "text": "В любом месте",
+                        "checked": ""
+                    }
+                ]
+            },
+            {
+                "id": 7,
+                "points": 1,
+                "shild": false,
+                "life": 0,
+                "damage": 1,
+                "question": "Выбери наземные виды транспорт",
+                "success": false,
+                "answers": [
+                    {
+                        "id": 1,
+                        "isTrue": true,
+                        "text": "Автобус",
+                        "checked": ""
+                    },
+                    {
+                        "id": 2,
+                        "isTrue": false,
+                        "text": "Вертолёт",
+                        "checked": ""
+                    },
+                    {
+                        "id": 3,
+                        "isTrue": false,
+                        "text": "Подводная лодка",
+                        "checked": ""
+                    }
+                ]
+            },
+            {
+                "id": 8,
+                "points": 1,
+                "shild": false,
+                "life": 1,
+                "damage": 1,
+                "question": "Как нужно перевозить детей в автомобиле?",
+                "success": false,
+                "answers": [
+                    {
+                        "id": 1,
+                        "isTrue": false,
+                        "text": "На сидении",
+                        "checked": ""
+                    },
+                    {
+                        "id": 2,
+                        "isTrue": true,
+                        "text": "В детском кресле",
+                        "checked": ""
+                    },
+                    {
+                        "id": 3,
+                        "isTrue": false,
+                        "text": "На сидении пристегнутыми ремнем безопасности",
+                        "checked": ""
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": 3,
+        "name": "Космическое путешествие",
+        "questions": [
+            {
+                "id": 1,
+                "points": 1,
+                "shild": false,
+                "life": 0,
+                "damage": 1,
+                "question": "Бывают ли метеорные дожди?",
+                "success": false,
+                "answers": [
+                    {
+                        "id": 1,
+                        "isTrue": false,
+                        "text": "Нет, дождь – это когда вода проливается на Землю.",
+                        "checked": ""
+                    },
+                    {
+                        "id": 2,
+                        "isTrue": false,
+                        "text": "Бывают, но не на Земле.",
+                        "checked": ""
+                    },
+                    {
+                        "id": 3,
+                        "isTrue": true,
+                        "text": "Бывают, и мы можем их наблюдать.",
+                        "checked": ""
+                    }
+                ]
+            },
+            {
+                "id": 2,
+                "points": 1,
+                "shild": false,
+                "life": 0,
+                "damage": 1,
+                "question": "Бывают ли черные дыры?",
+                "success": false,
+                "answers": [
+                    {
+                        "id": 1,
+                        "isTrue": false,
+                        "text": "Нет, это выдумки писателей-фантастов.",
+                        "checked": ""
+                    },
+                    {
+                        "id": 2,
+                        "isTrue": true,
+                        "text": "Да, черные дыры существуют.",
+                        "checked": ""
+                    },
+                    {
+                        "id": 3,
+                        "isTrue": false,
+                        "text": "Черные дыры существуют, но живут очень недолго, поэтому их трудно было обна-ружить.",
+                        "checked": ""
+                    }
+                ]
+            },
+            {
+                "id": 3,
+                "points": 1,
+                "shild": true,
+                "life": 0,
+                "damage": 1,
+                "question": "В какой галактике находится Земля?",
+                "success": false,
+                "answers": [
+                    {
+                        "id": 1,
+                        "isTrue": false,
+                        "text": "Земля находится в Солнечной галактике.",
+                        "checked": ""
+                    },
+                    {
+                        "id": 2,
+                        "isTrue": false,
+                        "text": "Галактика, в которой находится Земля, называется Андромеда.",
+                        "checked": ""
+                    },
+                    {
+                        "id": 3,
+                        "isTrue": true,
+                        "text": "Земля находится в галактике Млечный Путь.",
+                        "checked": ""
+                    }
+                ]
+            },
+            {
+                "id": 4,
+                "points": 1,
+                "shild": false,
+                "life": 1,
+                "damage": 1,
+                "question": "В чем особенность меркурианских суток?",
+                "success": false,
+                "answers": [
+                    {
+                        "id": 1,
+                        "isTrue": false,
+                        "text": "Сутки на Меркурии равны меркурианскому году.",
+                        "checked": ""
+                    },
+                    {
+                        "id": 2,
+                        "isTrue": true,
+                        "text": "В меркурианском году меньше двух суток.",
+                        "checked": ""
+                    },
+                    {
+                        "id": 3,
+                        "isTrue": false,
+                        "text": "Меркурианские сутки равны земным.",
+                        "checked": ""
+                    }
+                ]
+            },
+            {
+                "id": 5,
+                "points": 1,
+                "shild": true,
+                "life": 0,
+                "damage": 1,
+                "question": "Встречались ли в составе метеоритов химические элементы, не известные ранее на Земле?",
+                "success": false,
+                "answers": [
+                    {
+                        "id": 1,
+                        "isTrue": false,
+                        "text": "Да, по ним ученые определили, что существуют другие цивилизации.",
+                        "checked": ""
+                    },
+                    {
+                        "id": 2,
+                        "isTrue": false,
+                        "text": "Да, но они не смогли долго сохраниться в земных условиях, и ученые не успели их изучить.",
+                        "checked": ""
+                    },
+                    {
+                        "id": 3,
+                        "isTrue": true,
+                        "text": "Нет, метеориты состоят из тех же самых химических элементов, которые есть на Земле.",
+                        "checked": ""
+                    }
+                ]
+            },
+            {
+                "id": 6,
+                "points": 1,
+                "shild": false,
+                "life": 0,
+                "damage": 1,
+                "question": "Где находятся астероиды-троянцы?",
+                "success": false,
+                "answers": [
+                    {
+                        "id": 1,
+                        "isTrue": false,
+                        "text": "В поясе астероидов.",
+                        "checked": ""
+                    },
+                    {
+                        "id": 2,
+                        "isTrue": true,
+                        "text": "На орбите Юпитера, перед ним и позади него.",
+                        "checked": ""
+                    },
+                    {
+                        "id": 3,
+                        "isTrue": false,
+                        "text": "Между Юпитером и Сатурном.",
+                        "checked": ""
+                    }
+                ]
+            },
+            {
+                "id": 7,
+                "points": 1,
+                "shild": false,
+                "life": 0,
+                "damage": 1,
+                "question": "Где расположена большая часть астероидов?",
+                "success": false,
+                "answers": [
+                    {
+                        "id": 1,
+                        "isTrue": false,
+                        "text": "Больше всего астероидов находится рядом с Солнцем.",
+                        "checked": ""
+                    },
+                    {
+                        "id": 2,
+                        "isTrue": false,
+                        "text": "Большая часть астероидов расположена вдалеке от Солнца, за планетой Нептун.",
+                        "checked": ""
+                    },
+                    {
+                        "id": 3,
+                        "isTrue": true,
+                        "text": "Большинство астероидов обращается вокруг Солнца между Марсом и Юпите-ром.",
+                        "checked": ""
+                    }
+                ]
+            },
+            {
+                "id": 8,
+                "points": 1,
+                "shild": false,
+                "life": 1,
+                "damage": 1,
+                "question": "Действительно ли звезды в созвездиях находятся близко друг от друга?",
+                "success": false,
+                "answers": [
+                    {
+                        "id": 1,
+                        "isTrue": false,
+                        "text": "Да, иначе их не объединили бы в одно созвездие.",
+                        "checked": ""
+                    },
+                    {
+                        "id": 2,
+                        "isTrue": false,
+                        "text": "Да, по космическим меркам они расположены близко друг к другу.",
+                        "checked": ""
+                    },
+                    {
+                        "id": 3,
+                        "isTrue": true,
+                        "text": "Нет, на самом деле их могут разделять огромные расстояния.",
+                        "checked": ""
+                    }
+                ]
+            },
+            {
+                "id": 9,
+                "points": 1,
+                "shild": true,
+                "life": 1,
+                "damage": 1,
+                "question": "Из атомов какого вещества состоит озон?",
+                "success": false,
+                "answers": [
+                    {
+                        "id": 1,
+                        "isTrue": true,
+                        "text": "Атомов кислорода.",
+                        "checked": ""
+                    },
+                    {
+                        "id": 2,
+                        "isTrue": false,
+                        "text": "Атомов водорода.",
+                        "checked": ""
+                    },
+                    {
+                        "id": 3,
+                        "isTrue": false,
+                        "text": "Атомов азота",
+                        "checked": ""
+                    }
+                ]
+            },
+            {
+                "id": 10,
+                "points": 1,
+                "shild": false,
+                "life": 0,
+                "damage": 1,
+                "question": "К какому типу относят галактику Млечный Путь?",
+                "success": false,
+                "answers": [
+                    {
+                        "id": 1,
+                        "isTrue": false,
+                        "text": "Это эллиптическая галактика.",
+                        "checked": ""
+                    },
+                    {
+                        "id": 2,
+                        "isTrue": true,
+                        "text": "Это спиральная галактика.",
+                        "checked": ""
+                    },
+                    {
+                        "id": 3,
+                        "isTrue": false,
+                        "text": "Это неправильная галактика.",
+                        "checked": ""
+                    }
+                ]
+            }
+        ]
+    }
+]
+`;

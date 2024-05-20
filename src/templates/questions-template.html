@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en" class="h-100">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link rel="stylesheet" href="../../css/default.css" />
+    <link rel="stylesheet" href="../../css/questions.css" />
+</head>
+<body class="h-100">
+    <!-- TODO: 
+        1. Помощь адьютанта;
+            1.1. Первый урон;
+            1.2. Первый найденный щит;
+            1.3. Первый раз открыта страница с темами;
+            1.4. Первая завершенная тема;
+        2. Если потратил все жизни то незакрытые темы обнуляются (заново);
+        3. Перемешать вопросы у незакрытых тем если закончились жизни; -->
+
+
+    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title text-secondary" id="staticBackdropLabel">
+                    Альтруист
+                </h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="d-flex">
+                    <div class="flex-shrink-0">
+                      <img src="../icons/0955.png_300.png" width="64" height="64" alt="...">
+                    </div>
+                    <div id="spictator-comment" class="flex-grow-1 ms-3 text-secondary satodsan-uvemopag">
+                      This is some content from a media component. You can replace this with any content and adjust it as needed.
+                    </div>
+                  </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
+            </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div id="main-block" class="block-main d-flex flex-column p-2 mx-auto">
+        <div class="d-flex justify-content-between align-items-center">
+            <div class="user-points text-start d-inline-block fs-5 p-2">Счет: 123123</div>
+            <img class="back" src="../icons/replyback_87524.png" width="32" height="32" alt="" srcset=""
+                onclick="location.href='themes-template.html'"
+            >
+        </div>
+        <div class="block-user">
+            <div class="block-user-icon">
+                <img src="../icons/pngwing.com.png" width="64" height="64" alt="user" srcset="">
+            </div>
+            <div class="block-user-helth">
+                <img src="../icons/heart_icon-icons.com_54429.ico" alt="helth" srcset="">
+                <img src="../icons/heart_icon-icons.com_54429.ico" alt="helth" srcset="">
+                <img src="../icons/heart_icon-icons.com_48290.ico" alt="helth" srcset="">
+            </div>
+            <div class="block-user-shild">
+                <img src="../icons/shield.png" alt="helth" srcset="">
+            </div>
+        </div>
+        <div class="block-question mt-3">
+            <p class="text-center fs-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis architecto aperiam excepturi.</p>
+            <div class="block-answers d-flex flex-column">
+                <div id="test" data-answer="true" class="answer text-center fw-bold p-2 border shadow-sm rounded my-1 isTrue-answer">
+                    Lorem ipsum dolor sit.
+                </div>
+                <div data-answer="false" class="answer text-center fw-bold p-2 border shadow-sm rounded my-1 isFalse-answer">
+                    Lorem ipsum dolor sit amet.
+                </div>
+                <div data-answer="false" class="answer text-center fw-bold p-2 border shadow-sm rounded my-1">
+                    Lorem, ipsum dolor.
+                </div>
+                <div data-answer="false" class="answer text-center fw-bold p-2 border shadow-sm rounded my-1">
+                    Lorem ipsum dolor sit amet consectetur.
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+    <script>
+        
+        let answerTiles = document.querySelectorAll('.answer')
+        for (let i = 0; i < answerTiles.length; i++) {
+            answerTiles[i].addEventListener("click", click_answer);
+        }
+        
+        
+
+        function click_answer(e) {
+            let element = e.target;
+            let typeAnswer = e.target.getAttribute('data-answer');
+            let tileY = element.offsetTop;
+            let tileX = element.offsetLeft;
+            let tileW = element.offsetWidth;
+            let tileH = element.offsetHeight;
+
+            let centerW = parseInt(tileW / 2);
+            let centerH = parseInt(tileH / 2);
+
+            let flowX = tileX + centerW;
+            let flowY = tileY + centerH;
+
+            let flowElement = document.createElement('img');
+            flowElement.src = '../icons/heart_icon-icons.com_54429.ico';
+            flowElement.width = 48;
+            flowElement.height = 48;
+            flowElement.style.position = 'absolute';
+            flowElement.style.top = flowY + 'px';
+            flowElement.style.left = flowX + 'px';
+            flowElement.style.zIndex = 999;
+            flowElement.style.backgroundColor = 'white';
+            flowElement.style.borderRadius = 12 + 'px';
+            flowElement.style.padding = 6 + 'px';
+
+            let userBlock = document.querySelector('.block-user');
+            let userY = userBlock.offsetTop;
+            let userX = userBlock.offsetLeft;
+            let userH = userBlock.offsetHeight;
+
+            let userBottomY = userY + userH;
+            userX += 50;
+
+            console.log('flowX = ' + flowX + ", flowY = " + flowY);
+            console.log('userX = ' + userX + ", userBottomY = " + userBottomY);
+
+            document.querySelector('body').style.position = 'relative';
+            document.querySelector('body').append(flowElement);
+
+            new Promise((resolve, reject) => {
+                let element = target(flowElement, flowX, flowY, userX, userBottomY);
+                resolve(element);
+            }).then(e => e.remove());
+        }
+
+        async function target(element, x, y, targetX, targetY) {
+            let posX = x;
+            let posY = y;
+            let step = 0.5;
+            let offsetY = 10;
+            targetY = targetY - offsetY;
+            while(posY > targetY) {
+                let data = await new Promise((resolve, reject) => {
+                    setTimeout((element, x, y, step, resolve) => {
+                        var v = 500; //какая-то скорость
+                        var vx = ((targetX - x)/((targetX - x)*(targetX - x) + (targetY - y)*(targetY - y)))*v;
+                        var vy = ((targetY - y)/((targetX - x)*(targetX - x) + (targetY - y)*(targetY - y)))*v;
+
+                        x += vx;
+                        y += vy;
+
+                        element.style.top = y + 'px';
+                        element.style.left = x + 'px';
+                        resolve({x: x, y: y });
+                    }, 1000 / 59, element, posX, posY, step, resolve);
+                });
+
+                posX = data.x;
+                posY = data.y;
+            }
+
+            return element;
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        // const myModal = document.getElementById('staticBackdrop')
+        // const myModalAlternative = new bootstrap.Modal(myModal);
+        // spicatator_text('clear-progress')
+        // myModalAlternative.show('static');
+        
+        function spicatator_text(item) {
+            let spictatorCommnet = document.querySelector('#spictator-comment');
+
+            if (item == 'helth') {
+                spictatorCommnet.innerHTML = `
+                    Вы нашли дополнительную жизнь. Это позволяет пополнить шкалу здоровья
+                    <img src="../icons/heart_icon-icons.com_48290.ico" width="16" height="16" alt="helth" srcset=""> -> <img src="../icons/heart_icon-icons.com_54429.ico" width="16" height="16" alt="helth" srcset="">
+                    на случаи ошибок ответа на вопросы
+                `;
+            } else if (item == 'damage') {
+                spictatorCommnet.innerHTML = `
+                    На непраильный ответ вы тратите жизни
+                    <img src="../icons/heart_icon-icons.com_54429.ico" width="16" height="16" alt="helth" srcset=""> -> <img src="../icons/heart_icon-icons.com_48290.ico" width="16" height="16" alt="helth" srcset=""> Старайтесь отвечать правильно!
+                `;
+            } else if (item == 'shild') {
+                spictatorCommnet.innerHTML = `
+                    Вы нашли щит. Это защитит вас на случай неправильного ответа
+                    <img src="../icons/shield.png" width="16" height="16" alt="helth" srcset="">
+                `;
+            } else if (item == 'damage-shild') {
+                spictatorCommnet.innerHTML = `
+                    Щит защитил ваши жизни от неправильного ответа. Отвечайте на вопрос внимательней!
+                `;
+            } else if (item == 'point') {
+                spictatorCommnet.innerHTML = `
+                    За правильный ответ вы получает очки +1
+                `;
+            } else if (item == 'null-helth') {
+                spictatorCommnet.innerHTML = `
+                    Ваши жизни к сожалению закончились 
+                    <img src="../icons/heart_icon-icons.com_48290.ico" width="16" height="16" alt="helth" srcset="">
+                    <img src="../icons/heart_icon-icons.com_48290.ico" width="16" height="16" alt="helth" srcset="">
+                    <img src="../icons/heart_icon-icons.com_48290.ico" width="16" height="16" alt="helth" srcset="">
+                     Это сбросит весь прогресс незавершенных тем. Накопленные очки на завершенных темах сохраняться.
+                `
+            } else if (item == 'clear-progress') {
+                spictatorCommnet.innerHTML = `
+                    К сожадению вы потратили все жизни отвечая неправильно - это сбросит весь накопленный прогресс незавершенных тем 
+                    <span class="badge rounded-pill bg-danger">4/6</span> -> <span class="badge rounded-pill bg-danger">0/6</span> и 
+                `;
+            } else if (item == 'themes') {
+                spictatorCommnet.innerHTML = `
+                    Вы берирайте темы по вкусу и отвечайте на интересные вопросы. 
+                    Зарабатывайте очки отвечая на вопросы и хвастайтесь своими интелектуальными способностями перед друзьями :)
+                    <span class="badge rounded-pill bg-danger">0/6</span> -> <span class="badge rounded-pill bg-danger">5/6</span> и 
+                `;
+            }
+        }
+
+    </script>
+</body>
+</html>
